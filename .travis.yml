@@ -6,4 +6,4 @@ before_install:
     - docker build -t dmitryshay/docker-learning -f Dockerfile.dev .
 
 script:
-    - docker run dmitryshay/docker-learning npm run test -- --coverage
+    - docker run -e CI=true dmitryshay/docker-learning npm run test -- --coverage
